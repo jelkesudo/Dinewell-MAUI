@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ispitpredaja.UpdateRestaurant"
+             Title="UpdateRestaurant"
+             xmlns:pages="clr-namespace:Ispitpredaja">
+
+    <VerticalStackLayout>
+        <StackLayout>
+            <Label Text="Name:" FontSize="16" />
+            <Entry x:Name="Name" Placeholder="Name" Text="{Binding Name.Value}" />
+            <Label Text="{Binding Name.Error}" FontSize="16" TextColor="Red" />
+            
+            <Label Text="Description:" FontSize="16" />
+            <Entry x:Name="Description" Placeholder="Description" Text="{Binding Description.Value}" />
+            <Label Text="{Binding Description.Error}" FontSize="16" TextColor="Red" />
+
+            <Label Text="Address:" FontSize="16" />
+            <Entry x:Name="Address" Placeholder="Address" Text="{Binding Address.Value}" />
+            <Label Text="{Binding Address.Error}" FontSize="16" TextColor="Red" />
+
+            <Label Text="Address number:" FontSize="16" />
+            <Entry x:Name="AddressNumber" Placeholder="Address Number" Text="{Binding AddressNumber.Value}" />
+            <Label Text="{Binding AddressNumber.Error}" FontSize="16" TextColor="Red" />
+            
+            <Label Text="WorkFrom:" FontSize="16" />
+            <Entry x:Name="WorkFrom" Placeholder="Work From" Text="{Binding WorkFrom.Value}" />
+            <Label Text="{Binding WorkFrom.Error}" FontSize="16" TextColor="Red" />
+            
+            <Label Text="Work To:" FontSize="16" />
+            <Entry x:Name="WorkTo" Placeholder="Work To" Text="{Binding WorkTo.Value}" />
+            <Label Text="{Binding WorkTo.Error}" FontSize="16" TextColor="Red" />
+
+            <Button HorizontalOptions="Start"
+                Text="Update"
+                Command="{Binding Source={RelativeSource AncestorType={x:Type pages:UpdateRestaurant}}, Path=BindingContext.UpdateServiceCommand}" />
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

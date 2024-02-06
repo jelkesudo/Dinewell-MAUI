@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ispitpredaja.RegisterPage"
+             Title="RegisterPage"
+             xmlns:local="clr-namespace:Ispitpredaja.ViewModels">
+    
+    <ContentPage.BindingContext>
+        <local:RegisterViewModel/>
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout>
+        <Label Text="Your username:" FontSize="16" />
+        <Entry x:Name="Username" Placeholder="Username" Text="{Binding Username.Value}" />
+        <Label  Text="{Binding Username.Error}" IsVisible="{Binding Username.HasError}" FontSize="16" TextColor="Red"/>
+
+        <Label Text="Your first name:" FontSize="16" />
+        <Entry x:Name="FirstName" Placeholder="First name" Text="{Binding FirstName.Value}" />
+        <Label  Text="{Binding FirstName.Error}" IsVisible="{Binding FirstName.HasError}" FontSize="16" TextColor="Red"/>
+
+        <Label Text="Your last name:" FontSize="16" />
+        <Entry x:Name="LastName" Placeholder="Last name" Text="{Binding LastName.Value}" />
+        <Label  Text="{Binding LastName.Error}" IsVisible="{Binding LastName.HasError}" FontSize="16" TextColor="Red"/>
+
+        <Label Text="Your email:" FontSize="16" />
+        <Entry x:Name="Email" Placeholder="Email" Text="{Binding Email.Value}" />
+        <Label  Text="{Binding Email.Error}" IsVisible="{Binding Email.HasError}" FontSize="16" TextColor="Red"/>
+        
+        <Label Text="Your password:" FontSize="16" />
+        <Entry IsPassword="True" x:Name="Password" Placeholder="Password" Text="{Binding Password.Value}" />
+        <Label  Text="{Binding Password.Error}" IsVisible="{Binding Password.HasError}" FontSize="16" TextColor="Red"/>
+
+        <Label Text="Your address:" FontSize="16" />
+        <Entry x:Name="Address" Placeholder="Password" Text="{Binding Address.Value}" />
+        <Label  Text="{Binding Address.Error}" IsVisible="{Binding Address.HasError}" FontSize="16" TextColor="Red"/>
+
+        <Label Text="Your address number:" FontSize="16" />
+        <Entry x:Name="AddressNumber" Placeholder="AddressNumber" Text="{Binding AddressNumber.Value}" />
+        <Label  Text="{Binding AddressNumber.Error}" IsVisible="{Binding AddressNumber.HasError}" FontSize="16" TextColor="Red"/>
+        
+        <Button
+                IsEnabled="{Binding IsRegisterButtonEnabled}"
+                x:Name="CounterBtn"
+                Text="Register now"
+                Clicked="RegisterUserButton"
+                HorizontalOptions="Center" />
+        <Button
+                x:Name="LoginBtn"
+                Text="Already have an account, login here."
+                Clicked="GoToLoginPage"
+                HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

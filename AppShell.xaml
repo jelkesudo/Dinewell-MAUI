@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:Ispitpredaja"
+       FlyoutBehavior="Flyout"
+       x:Class="Ispitpredaja.AppShell">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <ImageButton Source="hamburger_icon.png" Clicked="OnHamburgerIconClicked" />
+        </StackLayout>
+    </Shell.TitleView>
+
+    
+    <FlyoutItem Title="Home" Icon="home.png">
+        <ShellContent ContentTemplate="{DataTemplate local:HomePage}" />
+    </FlyoutItem>
+
+    
+</Shell>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ispitpredaja.OneRestaurant"
+             Title="OneRestaurant"
+             xmlns:pages="clr-namespace:Ispitpredaja">
+    
+    
+    
+    <ScrollView>
+    <VerticalStackLayout>
+        <StackLayout Spacing="10" Padding="20">
+
+            <Label Text="{Binding Restaurant.Value.Name}" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <Label Text="{Binding Restaurant.Value.WorkingHours}" FontSize="12" FontAttributes="Italic" />
+            <Label Text="{Binding Restaurant.Value.Address}" FontSize="12" FontAttributes="Italic" />
+            <Label Text="{Binding Restaurant.Value.Description}" FontSize="12" FontAttributes="Italic" />
+
+            <CollectionView ItemsSource="{Binding Restaurant.Value.FoodCategories}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold"/>
+
+                            <!-- Nested CollectionView for child collection -->
+                            <CollectionView ItemsSource="{Binding Meals}">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout>
+                                            <!-- Display child item properties here -->
+                                                <Label FontSize="12" Text="{Binding Name}" />
+                                                <Label FontSize="12" Text="{Binding Price}" />
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button HorizontalOptions="Center"
+                Text="Go back"
+                Clicked="GoBackToRestaurant" />
+        </StackLayout>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

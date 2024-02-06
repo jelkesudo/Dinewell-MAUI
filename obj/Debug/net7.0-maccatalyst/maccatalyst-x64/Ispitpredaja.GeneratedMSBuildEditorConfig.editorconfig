@@ -1,0 +1,83 @@
+is_global = true
+build_property.TargetFramework = net7.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Ispitpredaja
+build_property.ProjectDir = C:\Users\Plesh\Desktop\Ispitpredaja\
+
+[C:/Users/Plesh/Desktop/Ispitpredaja/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ispitpredaja.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Plesh/Desktop/Ispitpredaja/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ispitpredaja.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Plesh/Desktop/Ispitpredaja/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ispitpredaja.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = HomePage.xaml
+
+[C:/Users/Plesh/Desktop/Ispitpredaja/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ispitpredaja.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Plesh/Desktop/Ispitpredaja/MyProfile.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ispitpredaja.MyProfile.xaml
+build_metadata.AdditionalFiles.TargetPath = MyProfile.xaml
+build_metadata.AdditionalFiles.RelativePath = MyProfile.xaml
+
+[C:/Users/Plesh/Desktop/Ispitpredaja/OneRestaurant.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ispitpredaja.OneRestaurant.xaml
+build_metadata.AdditionalFiles.TargetPath = OneRestaurant.xaml
+build_metadata.AdditionalFiles.RelativePath = OneRestaurant.xaml
+
+[C:/Users/Plesh/Desktop/Ispitpredaja/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ispitpredaja.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RegisterPage.xaml
+
+[C:/Users/Plesh/Desktop/Ispitpredaja/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ispitpredaja.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Plesh/Desktop/Ispitpredaja/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ispitpredaja.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/Plesh/Desktop/Ispitpredaja/Restaurants.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ispitpredaja.Restaurants.xaml
+build_metadata.AdditionalFiles.TargetPath = Restaurants.xaml
+build_metadata.AdditionalFiles.RelativePath = Restaurants.xaml
+
+[C:/Users/Plesh/Desktop/Ispitpredaja/UnauthorizedUserPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ispitpredaja.UnauthorizedUserPage.xaml
+build_metadata.AdditionalFiles.TargetPath = UnauthorizedUserPage.xaml
+build_metadata.AdditionalFiles.RelativePath = UnauthorizedUserPage.xaml
+
+[C:/Users/Plesh/Desktop/Ispitpredaja/UpdateRestaurant.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Ispitpredaja.UpdateRestaurant.xaml
+build_metadata.AdditionalFiles.TargetPath = UpdateRestaurant.xaml
+build_metadata.AdditionalFiles.RelativePath = UpdateRestaurant.xaml

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ispitpredaja.Restaurants"
+             Title="Restaurants"
+             xmlns:local="clr-namespace:Ispitpredaja.ViewModels"
+             xmlns:pages="clr-namespace:Ispitpredaja">
+    <ContentPage.BindingContext>
+        <local:RestaurantsViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+    <VerticalStackLayout>
+
+            <Entry x:Name="Search" Placeholder="Search" Text="{Binding Keyword.Value}" />
+            <Button Text="Search" HorizontalOptions="Start" Command="{Binding Source={RelativeSource AncestorType={x:Type pages:Restaurants}}, Path=BindingContext.SearchRestaurantCommand}"/>
+
+            <CollectionView ItemsSource="{Binding Restaurants}" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" />
+
+                        <Label Text="{Binding WorkingHours}" FontSize="12" FontAttributes="Italic" />
+                        <Label Text="{Binding Description}" FontSize="12" FontAttributes="Italic" />
+                        <Label Text="{Binding Address}" FontSize="12" FontAttributes="Italic" />
+                        <Label Text="Deleted At:" FontSize="12" FontAttributes="Italic" />
+                        <Label Text="{Binding DeletedAt}" FontSize="12" FontAttributes="Italic" />
+                        <Label Text="Updated At:" FontSize="12" FontAttributes="Italic" />
+                        <Label Text="{Binding UpdatedAt}" FontSize="12" FontAttributes="Italic" />
+
+                        <Button HorizontalOptions="Start"
+                Text="See menu"
+                Command="{Binding Source={RelativeSource AncestorType={x:Type pages:Restaurants}}, Path=BindingContext.GoToRestaurantCommand}"
+                CommandParameter="{Binding Id}" />
+
+                <Button HorizontalOptions="Start"
+                Text="Update"
+                Command="{Binding Source={RelativeSource AncestorType={x:Type pages:Restaurants}}, Path=BindingContext.UpdateRestaurantCommand}"
+                CommandParameter="{Binding Id}" />
+                    
+
+                    <Button HorizontalOptions="Start"
+                Text="Delete"
+                Command="{Binding Source={RelativeSource AncestorType={x:Type pages:Restaurants}}, Path=BindingContext.DeleteRestaurantCommand}"
+                CommandParameter="{Binding Id}" />
+
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

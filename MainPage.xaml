@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ispitpredaja.MainPage"
+             xmlns:local="clr-namespace:Ispitpredaja.ViewModels">
+    <ContentPage.BindingContext>
+        <local:LoginViewModel/>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label Text="Your email:" FontSize="16" />
+            <Entry x:Name="Email" Placeholder="Email" Text="{Binding Email.Value}" />
+            <Label Text="{Binding Email.Error}" FontSize="16" TextColor="Red" />
+
+            <Label Text="Your password:" FontSize="16" />
+            <Entry IsPassword="True" x:Name="Password" Placeholder="Password" Text="{Binding Password.Value}" />
+            <Label  Text="{Binding Password.Error}" IsVisible="{Binding Password.HasError}" FontSize="16" TextColor="Red"/>
+
+            <Button
+                IsEnabled="{Binding IsLoginButtonEnabled}"
+                x:Name="CounterBtn"
+                Text="Log In"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+            <Button
+                x:Name="RegisterBtn"
+                Text="Don't have an account, register here."
+                Clicked="GoToRegisterPage"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
